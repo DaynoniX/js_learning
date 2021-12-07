@@ -1,5 +1,12 @@
 A project for learning the JS practices.
 
+#[0.1.0] - 07.12.21 - created API call with promises
+
+### Added
+- separate page for output and stylesheet
+- API call functionality to load several images from pixabay.com API with skeleton animation
+
+
 #[0.0.0] - initial changes
 
 ### Added

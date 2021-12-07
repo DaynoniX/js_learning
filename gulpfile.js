@@ -1,6 +1,6 @@
 'use strict'
 
-const { gulp, watch, task, src, series, dest} = require('gulp'),
+const {  watch,  src, series, dest} = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass')(require('sass')),
     rigger = require('gulp-rigger'),
