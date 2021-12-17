@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/class.css">
+    <title>Class Check</title>
+</head>
+<body>
+<div id="clock">
+    <div id="output">
+        There will be timer:
+        <span id="timer"></span>
+    </div>
+    <button id="start" onclick="timer.start()">Start</button>
+    <button id="stop" onclick="timer.stop()">Stop</button>
+</div>
+<script>
+    class Timer{
+        constructor({ template }, targetId){
+            this.template = template;
+            this.target = document.getElementById(targetId);
+        }
+        render() {
+            let date = new Date();
+
+            let hours = date.getHours();
+            if (hours < 10) hours = '0' + hours;
+
+            let mins = date.getMinutes();
+            if (mins < 10) mins = '0' + mins;
+
+            let secs = date.getSeconds();
+            if (secs < 10) secs = '0' + secs;
+
+            let output = this.template
+                .replace('h', hours)
+                .replace('m', mins)
+                .replace('s', secs);
+            this.target.innerHTML = output;
+        }
+        stop() {
+            clearInterval(this.timer);
+        };
+        start() {
+            this.render();
+            this.timer = setInterval(() => this.render(), 1000);
+        };
+    }
+    let timer = new Timer({template: 'h:m:s'}, 'timer');
+</script>
+</body>
+</html>

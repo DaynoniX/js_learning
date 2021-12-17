@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#output {
+  grid-area: output;
+}
+
+#start {
+  grid-area: start;
+}
+
+#stop {
+  grid-area: stop;
+}
+
+#clock {
+  display: grid;
+  width: 300px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50px);
+  margin: 200px auto;
+  padding: 20px;
+  background: #eee;
+  border-radius: 15px;
+  grid-gap: 10px;
+  grid-template-areas: "output output" "start stop";
+}

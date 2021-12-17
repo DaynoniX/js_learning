@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     const btn = document.querySelector('#startBtn');
     const area = document.querySelector('#gridArea');
-    let url = 'https://pixabay.com/api/?key=20542154-ac47cf93cfdf6c130a0d33f59&per_page=12';
+    let url = 'https://pixabay.com/api/?key=20542154-ac47cf93cfdf6c130a0d33f59&per_page=18';
 
 
 
