@@ -4,6 +4,10 @@ A project for learning the JS practices.
 
 ### Added
 - page for classes learning
+- page for webcomponents testing
+
+### Changed
+- separated mutual code part in scss into cleaner.scss to avoid duplication
 
 #[0.1.0] - 07.12.21 - created API call with promises
 

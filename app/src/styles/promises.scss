@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
+@import 'components/cleaner';
 header,
 main{
   max-width: 1140px;
@@ -34,13 +29,19 @@ img{
   grid-gap: 30px;
   &-item{
     border-radius: 15px;
-    overflow: hidden;
     position: relative;
     &_title{
       padding:  10px;
       background: #00000010;
+      border-radius: 0 0 15px 15px;
+    }
+    &_img{
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
     }
     &.loading{
+      overflow: hidden;
+      min-height: 200px;
       &::after{
         content:'';
         display: block;

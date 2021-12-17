@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 header,
@@ -36,12 +42,20 @@ img {
 }
 .grid-item {
   border-radius: 15px;
-  overflow: hidden;
   position: relative;
 }
 .grid-item_title {
   padding: 10px;
   background: #00000010;
+  border-radius: 0 0 15px 15px;
+}
+.grid-item_img {
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+.grid-item.loading {
+  overflow: hidden;
+  min-height: 200px;
 }
 .grid-item.loading::after {
   content: "";
