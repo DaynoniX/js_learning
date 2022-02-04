@@ -9,26 +9,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                data.hits.forEach(el => {
-                    let item = document.createElement('article');
-                    let image = new Image();
-                    let imageWrapper = document.createElement('div');
+                // Должна возвращать значение и вызывать функцию обработки,
+                // которая, в свою очередь, будет более эффективно вызывать методы компонента
 
-                    image.src = el.largeImageURL;
-
-                    imageWrapper.classList.add('grid-item_img');
-                    item.classList.add('grid-item', 'loading');
-
-                    imageWrapper.appendChild(image);
-                    item.appendChild(imageWrapper);
-                    item.innerHTML += `
-                            <div class="grid-item_title">
-                                Image title
-                            </div>`;
-                    area.appendChild(item);
-                    image.onload = () => item.classList.remove('loading');
-
-                })
+                // Переделать
+                data.hits.forEach(el => gridArea.renderArticlesFromPixabay(el));
+                console.log(data)
             })
     })
 });

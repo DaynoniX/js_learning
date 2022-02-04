@@ -1,0 +1,30 @@
+
+<auto-select
+        options="key:val, key1:val1"
+        multiple="true"
+        default=""
+        onclick="this.parseOptions()"
+>
+    click me
+</auto-select>
+<script defer>
+    class AutoSelect extends HTMLElement {
+        constructor() {
+            super();
+            this.parseOptions();
+        }
+        parseOptions(){
+            this.options = this.getAttribute('options');
+            const optType = typeof (this.options);
+            const optArray = this.options
+            console.log(this.options)
+        }
+        render(){
+
+        }
+        static get observedAttributes(){
+            return ['options','multiple'];
+        }
+    }
+    customElements.define("auto-select", AutoSelect);
+</script>

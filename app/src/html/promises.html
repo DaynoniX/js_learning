@@ -12,13 +12,19 @@
     <h1>Promises practice</h1>
 </header>
 <main>
-    <div class="grid" id="gridArea">
+    <div class="grid" id="gridArea-old">
 
     </div>
+    <masonry-grid
+            id="gridArea"
+            columns="3"
+            gap="20"
+    ></masonry-grid>
     <div class="controllers">
         <button class="default-btn" id="startBtn">Start</button>
     </div>
 </main>
 <script src="../js/promises.js"></script>
+<script src="../js/components/masonry-grid.js" ></script>
 </body>
 </html>
